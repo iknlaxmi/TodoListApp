@@ -7,8 +7,7 @@
 }
 .nav-btns {
   display: flex;
-  /* border-bottom: 1px solid black; */
-  /* width: 50%; */
+
   justify-content: center;
 }
 .nav-item {
@@ -26,17 +25,12 @@
   font-weight: 120px;
   width: 100px;
 }
-/* .btn:active,
-.btn:focus {
-  border-bottom: 5px solid #2f80ed;
-  outline: none;
-} */
+
 btn:no-active {
   border-bottom: none;
 }
 
 .hr-tag {
-  /* margin-top: -5px; */
   margin-top: -15px;
   width: 35%;
   margin-left: 500px;
@@ -48,12 +42,8 @@ btn:no-active {
 }
 .items {
   margin: 10px;
-  /* padding: 20%; */
 }
-/* .input-item {
-  width: 700px;
-  height: 200px;
-} */
+
 .input-item {
   width: 365px;
   height: 45px;
@@ -61,6 +51,10 @@ btn:no-active {
   font-size: 20px;
   margin-left: -12px;
   border: 3px solid gray;
+}
+.input-item:focus {
+  outline: none !important;
+  border: 2px solid #2f80ed;
 }
 .btn-item {
   height: 50px;
@@ -73,4 +67,43 @@ btn:no-active {
   font-size: 15px;
   cursor: pointer;
   margin: 20px;
+}
+/***********Media Queries:(Medium devices**************/
+@media screen and (max-width: 1024px) {
+  .hr-tag {
+    margin-top: -15px;
+    width: 65%;
+    margin-left: 130px;
+  }
+  .btn {
+    margin-left: -10px;
+  }
+}
+
+/********************For Smaller devices*/
+@media screen and (max-width: 600px) {
+  .hr-tag {
+    margin-top: -15px;
+    width: 85%;
+    margin-left: 40px;
+  }
+
+  .nav-item {
+    margin: 5px 20px 5px 5px;
+    padding: 5px;
+
+    width: 60px;
+  }
+  .input-item {
+    width: 300px;
+    height: 45px;
+
+    margin-left: 5px;
+  }
+  .btn-item {
+    height: 50px;
+    width: 100px;
+
+    margin-left: 100px;
+  }
 }

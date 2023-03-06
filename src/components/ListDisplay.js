@@ -36,8 +36,6 @@ function ListDisplay(props) {
         })
       );
     }
-
-    // console.log(completedList);
   }, [props.listdata, props.buttonData]);
 
   return (
@@ -50,13 +48,13 @@ function ListDisplay(props) {
                 <input
                   type="checkbox"
                   id={item.id}
-                  // defaultChecked={item.completed}
                   checked={item.completed}
                   className="input-checkbox"
                   onChange={handleStrike}
-                  value={item.item}
+                  // value={item.item}
                 />
-                <li className="strikthru">{item.item}</li>
+
+                <span className="strikthru">{item.item}</span>
                 {displayData.length !== 0 && props.buttonData === '3' && (
                   <div className="trash-item ">
                     <button type="text" className="delete-btn">

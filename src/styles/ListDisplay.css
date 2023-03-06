@@ -2,29 +2,29 @@
   display: flex;
   flex-wrap: wrap;
 
-  /* justify-content: center; */
-  /* margin-right: 200px; */
   margin-left: 410px;
 }
 .todolist-item {
   margin: 10px;
   align-items: center;
   justify-content: space-evenly;
-
-  /* padding: 20px; */
+  width: 500px;
+  height: 50px;
 }
 ul {
   list-style: none;
 }
 li {
   font-size: 23px;
-  /* vertical-align: bottom; */
-  /* margin: 5px; */
 }
 .input-checkbox {
   width: 25px;
   height: 25px;
   margin-left: 40px;
+  float: left;
+}
+span {
+  font-size: 20px;
 }
 .input-checkbox,
 li {
@@ -38,7 +38,6 @@ input[type='checkbox']:checked + li.strikthru {
   cursor: pointer;
 }
 .trash-icon {
-  /* size: 100px; */
   font-size: 25px;
   background-color: transparent;
   color: gray;
@@ -60,14 +59,12 @@ input[type='checkbox']:checked + li.strikthru {
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  /* color: white; */
 }
 .delall-container {
   display: inline-block;
   position: fixed;
   left: 1000px;
   margin-top: 20px;
-  /* justify-content: center; */
 }
 .flex1,
 .flex2 {
@@ -75,8 +72,45 @@ input[type='checkbox']:checked + li.strikthru {
 }
 .flex3 {
   justify-content: flex-end;
-  /* row-gap: 300px; */
-  gap: 100px;
 
-  /* margin-left: 400px; */
+  gap: 100px;
+}
+/***********Media Queries:(Medium devices**************/
+@media screen and (max-width: 1024px) {
+  .input-checkbox {
+  }
+  .todolist-container {
+    margin-left: 50px;
+  }
+  .delall-container {
+    left: 500px;
+    margin-top: 20px;
+
+    margin-left: 90px;
+  }
+  .trash-item {
+    left: 600px;
+  }
+  .todolist-item {
+    width: 450px;
+    height: 50px;
+  }
+}
+
+/********************For Smaller devices*/
+@media screen and (max-width: 600px) {
+  .todolist-container {
+    margin-left: -70px;
+  }
+  .todolist-item {
+    width: 350px;
+    height: 50px;
+  }
+  .delall-container {
+    left: 150px;
+    margin-top: 80px;
+  }
+  .trash-item {
+    left: 310px;
+  }
 }
